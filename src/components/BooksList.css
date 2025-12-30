@@ -1,0 +1,114 @@
+.books-list-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    margin-bottom: 30px;
+    color: #e4e9ee;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(135deg, #e4e9ee 0%, #b0c4de 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.book-card {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    text-align: left;
+    color: #e4e9ee;
+    font-size: 1em;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.book-card:hover {
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.95) 0%, rgba(30, 30, 30, 0.95) 100%);
+    border-color: rgba(74, 158, 255, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(74, 158, 255, 0.2);
+}
+
+.book-card:active {
+    transform: translateY(-2px);
+}
+
+.book-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.book-arrow {
+    opacity: 0.6;
+    font-size: 1.4em;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .books-list-container {
+        padding: 16px;
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin-bottom: 24px;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+    }
+
+    .book-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75em;
+        margin-bottom: 20px;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .book-card {
+        padding: 14px;
+        font-size: 0.95em;
+    }
+}
+
