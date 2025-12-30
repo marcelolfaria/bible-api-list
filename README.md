@@ -1,16 +1,41 @@
-# React + Vite
+# Bible Books List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React application that consumes the public Bible API to list and view available books and chapters.
 
-Currently, two official plugins are available:
+## 📋 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Lists all Bible books
+- View details of each book (chapters and translation information)
+- Error handling with user-friendly messages
+- Simple and responsive interface
 
-## React Compiler
+## 🚀 How to run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+2. Run the project in development mode:
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Access the application in your browser (usually at `http://localhost:5173`)
+
+## 🛠️ Technologies
+
+- React 19
+- Vite
+- API: [bible-api.com](https://bible-api.com)
+
+## 📝 Available scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run linter
+
+## 🔗 API used
+
+This project uses the public API [bible-api.com](https://bible-api.com) to fetch Bible books data.
